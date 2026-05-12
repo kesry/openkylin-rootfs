@@ -9,3 +9,4 @@ bash build.sh
 ```
 
 支持多加个架构 amd64 arm64 riscv64 架构。
+
