@@ -40,7 +40,6 @@ jobs:
         run: |
           sudo sed -i 's/jammy/noble/g' /etc/apt/sources.list
           sudo apt update -y && sudo apt install mmdebstrap qemu-user-static qemu-user systemd
-          sudo apt-mark hold usrmerge
           sudo cp -v /usr/lib/arch-test/riscv64 /usr/lib/arch-test/loong64
           sudo sed -i "/riscv64  => 'riscv64',/a\            loong64  => 'loongarch64'," /usr/bin/mmdebstrap
           sudo systemctl restart systemd-binfmt
