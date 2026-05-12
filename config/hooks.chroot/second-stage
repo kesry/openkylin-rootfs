@@ -7,6 +7,7 @@ run_in_chroot() {
     systemd-nspawn -D "$rootdir" bash -c "$@"
 }
 
+
 # 设置语言
 run_in_chroot "
 sed -i -E 's/#[[:space:]]?(en_US.UTF-8[[:space:]]+UTF-8)/\1/g' /etc/locale.gen
