@@ -20,6 +20,7 @@ DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 # 微软提供的 wsl 启动器会调用adduser,需要将 USERS_GID 和 USERS_GROUP 注释。
 run_in_chroot "sed -i -e 's/USERS_GID=100/#USERS_GID=100/' -e 's/USERS_GROUP=users/#USERS_GROUP=users/' /etc/adduser.conf"
 
+
 # 清理缓存
 run_in_chroot "
 apt clean
